@@ -5,6 +5,10 @@ html {
     color: #333333;
 }
 
+body {
+    background-color: #F8F7F3;
+}
+
 /* HEADER */
 
 .header {
@@ -20,8 +24,10 @@ html {
 
 .main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -34,6 +40,42 @@ html {
     box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
     padding: 5px;
     border-radius: 10px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button,
+input[type='color'] {
+  transition: transform 0.1s ease-in-out;
+  background-color: #F8F7F3;
+}
+
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* FOOTER */
